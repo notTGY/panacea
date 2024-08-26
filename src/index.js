@@ -38,8 +38,7 @@ if (creds) {
 
 import App from './App.jsx'
 
-socket.once('logged in', ({
-}) => {
+socket.once('logged in', () => {
   const tgButton = document.getElementById('telegram-login-your_bot')
   tgButton.style.display = 'none'
 
