@@ -27,7 +27,7 @@ const telegramAuth = () => {
 }
 if (creds) {
   socket.emit('login', {creds, loginType: 'jwt'})
-  socket.on('bad login', () => {
+  socket.once('bad login', () => {
     localStorage.removeItem('jwt')
     telegramAuth()
   })
